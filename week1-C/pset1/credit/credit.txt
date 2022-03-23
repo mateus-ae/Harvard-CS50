@@ -1,0 +1,7 @@
+get input from user
+if input has less than 13 digits, credit card number is invalid. Print "INVALID"
+if input has more than 16 digits, credit card number is invalid (but the get long function will reprompt user automatically)
+separate digits from the input ( maybe use modulo division)
+apply the luhn's algorithm to check if the number is valid
+if number is valid, than check the conditions to find out what card type it is
+if it's not valid, than print "INVALID"

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">TOTAL PRICE</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for symbol in symbols %}
+            <tr>
+                <td>{{ symbol["symbol"] }}</td>
+                <td>{{ symbol["name"] }}</td>
+                <td>{{ symbol["total_shares"] }}</td>
+                <td>{{ usd(lookup(symbol["symbol"])["price"]) }}</td>
+                <td>{{ usd(lookup(symbol["symbol"])["price"] * symbol["total_shares"]) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>    
+        
+        <tfoot>
+            <tr>
+                <td colspan="3"></td>
+                <td><strong>Avaiable Cash</strong></td>
+                <td>{{ cash }}</td>
+            </tr>
+        
+            <tr>
+                <td class="border-0 w-bold text-end" colspan="3"></td>
+                <td class="border-0 w-bold text-end"><strong>TOTAL INVESTMENTS</strong></td>
+                <td class="border-0 w-bold text-end">{{ total_money }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

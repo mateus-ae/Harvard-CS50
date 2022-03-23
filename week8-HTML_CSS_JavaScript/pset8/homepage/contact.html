@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Contact Page</title>
+        
+        <script>
+			function Alert() {
+				if (document.getElementById("radio-mail").checked == true){
+  					alert("Done! We will contact you soon! We'll make sure to put an echantment on the letter so muggles won't be able to read it.");
+				}
+				
+				else if (document.getElementById("radio-floo").checked == true){
+  					alert("Done! We will contact you soon! Make sure to be around your fireplace.");
+				}
+				
+				else if (document.getElementById("radio-owl").checked == true){
+  					alert("Done! We will contact you soon! Be careful with our owls, sometimes they will peck you.");
+				}
+			}
+		</script>
+        
+    </head>
+    
+    <body>
+        <header>
+            
+            <div class="container-header">
+				
+				<h1><img class="hogwarts-logo" src="./images/hogwarts.png" alt="Hogwarts Logo"></h1>
+
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="houses.html">Houses</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+                
+        </header>
+        
+       <main>
+			<form onsubmit="Alert()">
+				<label for="fullname">Full Name</label>
+				<input type="text" id="fullname" class="input-main" required placeholder="Full Name">
+
+				
+
+				<label for="message">Message</label>
+				<textarea cols="70" rows="10" id="message" class="input-main" required></textarea>
+
+				<fieldset class="contact-options">
+					<legend>How would you like to be contacted?</legend>
+					<label for="radio-mail"><input type="radio" name="contact" value="mail" id="radio-mail">Muggle Mail</label>
+					
+					<label for="radio-floo"><input type="radio" name="contact" value="floo" id="radio-floo">Floo Network</label>
+					
+					<label for="radio-owl"><input type="radio" name="contact" value="owl" id="radio-owl" checked>Owl Postal Service</label>
+				</fieldset>
+
+				<fieldset class="contact-options">
+					<legend>What time would you prefer to be contacted?</legend>
+					<select>
+						<option>Morning</option>
+						<option>Afternoon</option>
+						<option>Evening</option>
+					</select>
+				</fieldset>
+
+
+				<input class="btn btn-primary" type="submit" value="Submit">
+			</form>
+			
+			<table>
+				<tr>
+					<td>Day</td>
+					<td>Office Hours</td>
+				</tr>
+				<tr>
+					<td>Mon-Fri</td>
+					<td>8h ~ 20h</td>
+				</tr>
+				<tr>
+					<td>Weekends</td>
+					<td>8h ~ 16h</td>
+				</tr>
+				<tr>
+					<td>Holidays</td>
+					<td>8h ~ 16h</td>
+				</tr>
+			</table>
+		</main>
+
+		<footer>
+			<!--image taken from https://www.pngegg.com/en/png-owiqt-->
+			<img class="hogwarts-logo" src="./images/hogwarts2.png" alt="Hogwarts Logo">
+			<p class="copyright">&copy; Copyright Hogwarts School of Witchcraft and Wizardry (Ficticious) - 2021</p>
+		</footer>
+	
+	</body>
+</html>

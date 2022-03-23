@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deposit
+{% endblock %}
+
+{% block main %}
+    <form action="/deposit" method="post">
+        <div class="form-group">
+            <h3>Please, select the amount of the deposit</h3>
+            <p>Min Deposit Allowed: $100.00</p>
+            <p>Max Deposit Allowed: $100,000.00</p>
+        </div>
+        <div class="form-group">
+            $
+            <input class="form-control" name="hundreds-of-thousands" autocomplete="off" placeholder="xxx" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="3" style="width: 55px">
+            ,
+            <input class="form-control" name="thousands" autocomplete="off"  placeholder="xxx" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' minlength="3" maxlength="3" style="width: 55px">
+            .
+            <input class="form-control" name="cents" autocomplete="off"  placeholder="xx" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' minlength="2" maxlength="2" style="width: 45px">
+        </div>
+        <button class="btn btn-primary" name="operation" autocomplete="off"  value="deposit" type="submit">Deposit</button>
+    </form>
+    
+    <p style="margin-top: 20px">Current Cash Amount: {{ cash }}</p>
+{% endblock %}

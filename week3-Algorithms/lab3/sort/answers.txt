@@ -1,0 +1,16 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Merge sort and bubble sort should take similar times when going through an already sorted array, but bubble sort should be considerably slower when going through
+a fully random one. So by testing the algorithms on sorted50k and random50k, I was able to identify which is which.
+
+sort2 uses: Merge Sort
+
+How do you know?: Merge sort and bubble sort should take similar times when going through an already sorted array, but Merge sort should be considerably faster when going through
+a fully random one. So by testing the algorithms on sorted50k and random50k, I was able to identify which is which.
+
+sort3 uses: Selection Sort
+
+How do you know?: Selection sort takes about the same time to sort numbers no matter how they are disposed because it wil always look at all the numbers
+in the array on every iteration. Besides that, it should be the slowest one when going through a sorted array because it has to go through the hole array at
+every iteration.
+So by testing the algorithms on random50k and sorted50k, the only one that behaved this way was the sort3.

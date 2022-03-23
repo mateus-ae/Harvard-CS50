@@ -1,0 +1,11 @@
+sorted 50000
+
+sort1 0m3.052s
+sort2 0m3.522s
+sort3 0m8.018s
+
+random 50000
+
+sort1 0m16.503s
+sort2 0m3.444s
+sort3 0m9.109s

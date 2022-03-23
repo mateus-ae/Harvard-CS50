@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deposit
+{% endblock %}
+
+{% block main %}
+    <form action="/confirmation" method="post">
+        <div class="form-group">
+            <h3>Please, review the information before proceeding.</h3>
+            <p>Type of Operation: {{ operation_type }}</p>
+            <p>Amount: {{ amount }}</p>
+        </div>
+        
+        <button class="btn btn-primary" type="submit">Confirm</button>
+    </form>
+{% endblock %}
